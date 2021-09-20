@@ -48,7 +48,7 @@ function inicializarEspacos(){
                 }
                 atualizaMostrador();
                 verificadorVencedor();
-
+                
             }
 
         }
@@ -101,8 +101,49 @@ if (vencedor !="") {
 
 }
 
+
+
 function sleep(ms){
 
-    return new Promise(resolve => setTimeout(resolve, ms));
-
+     return new Promise(resolve => setTimeout(resolve, ms));
+    
+       
+    
 }
+
+
+function resetGame(){
+    
+    gameOver = false;
+    
+    clearFields();
+    atualizaMostrador();
+      inicializarEspacos();
+      
+  }
+  
+  function clearFields(){
+      document.getElementById("a1").innerHTML = "";
+    document.getElementById("a2").innerHTML = "";
+    document.getElementById("a3").innerHTML = "";
+    
+    document.getElementById("b1").innerHTML = "";
+    document.getElementById("b2").innerHTML = "";
+    document.getElementById("b3").innerHTML = "";
+    
+    document.getElementById("c1").innerHTML = "";
+    document.getElementById("c2").innerHTML = "";
+    document.getElementById("c3").innerHTML = "";
+    
+    document.getElementById("a1").setAttribute("jogada", "");
+    document.getElementById("a2").setAttribute("jogada", "");
+    document.getElementById("a3").setAttribute("jogada", "");
+    
+    document.getElementById("b1").setAttribute("jogada", "");
+    document.getElementById("b2").setAttribute("jogada", "");
+    document.getElementById("b3").setAttribute("jogada", "");
+    
+    document.getElementById("c1").setAttribute("jogada", "");
+    document.getElementById("c2").setAttribute("jogada", "");
+    document.getElementById("c3").setAttribute("jogada", "");
+  };
